@@ -13,11 +13,30 @@ namespace MVCRockStar_21102021
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+           
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+               name: "Default23",
+               url: "school/class/{eid=1211}", //seo
+               defaults: new { controller = "Default", action = "getEmployeeId", eid = UrlParameter.Optional }
+           );
+
+           
+
+            routes.MapRoute(
+               name: "Default22",
+               url: "hotel/bedroom", //seo
+               defaults: new { controller = "Default", action = "GetId", id = UrlParameter.Optional }
+           );
+
+
+            routes.MapRoute(
+             name: "Default",
+             url: "{controller}/{action}/{id}",//old client Default/index
+             defaults: new { controller = "Default", action = "GetId", id = UrlParameter.Optional }
+         );
+
+
         }
     }
 }
