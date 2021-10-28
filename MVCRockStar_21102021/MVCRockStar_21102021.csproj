@@ -143,6 +143,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +161,9 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Default\Jungle.cshtml" />
     <Content Include="Views\New\RamaeInternational.cshtml" />
+    <Content Include="Views\Default\GetEmployeeInfo.cshtml" />
+    <Content Include="Views\Default\GetEmployeeInfo2.cshtml" />
+    <Content Include="Views\Default\GetEmployeeInfo3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,7 +179,6 @@
     <Folder Include="Areas\Purchase\Controllers\" />
     <Folder Include="Areas\Purchase\Models\" />
     <Folder Include="Areas\Purchase\Views\Shared\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
