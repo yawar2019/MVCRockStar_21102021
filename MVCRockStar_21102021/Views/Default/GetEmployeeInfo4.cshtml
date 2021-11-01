@@ -1,0 +1,23 @@
+﻿@model List<MVCRockStar_21102021.Models.EmployeeModel>
+@{
+    ViewBag.Title = "GetEmployeeInfo4";
+}
+
+<h2>GetEmployeeInfo4</h2>
+
+<table class="table-bordered">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>

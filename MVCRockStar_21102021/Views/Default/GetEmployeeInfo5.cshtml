@@ -1,0 +1,39 @@
+﻿@model MVCRockStar_21102021.Models.EmpDept
+@{
+    ViewBag.Title = "GetEmployeeInfo5";
+}
+
+<h2>GetEmployeeInfo5</h2>
+
+<table class="table-bordered">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in Model.Emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
+
+
+<table class="table-bordered">
+    <tr>
+        <th>DeptId</th>
+        <th>Dept Name</th>
+    </tr>
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+        </tr>
+    }
+
+</table>
