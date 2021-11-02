@@ -168,6 +168,8 @@
     <Content Include="Views\Default\MethodByViewModel.cshtml" />
     <Content Include="Views\Default\GetEmployeeInfo4.cshtml" />
     <Content Include="Views\Default\GetEmployeeInfo5.cshtml" />
+    <Content Include="Views\Default\getMepartialViewEx.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

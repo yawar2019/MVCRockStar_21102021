@@ -1,0 +1,35 @@
+﻿@model List<MVCRockStar_21102021.Models.EmployeeModel>
+@{
+    ViewBag.Title = "getMepartialViewEx";
+}
+
+<h2>getMepartialViewEx</h2>
+
+@{
+    int a = 12;
+    var s = Html.Partial("_MyPartialView", Model);
+
+    if (a > 11)
+    {
+        @s
+    }
+
+}<br />
+@{
+     Html.RenderPartial("_MyPartialView", Model);
+    }
+
+
+
+
+@* html helper class object '@Html' give predefined methods
+    controls,partial method etc..
+        1)Partial Method and render partial method syntax is different
+        2)Partial Method will render view and return MvcHtml string as an Output
+          Render PartialMethod render View and return void
+        3)Render Partial Method is more faster then Partial method as it only render view
+          not return any Output
+        4)Partial Method values can be store in variable and can be called
+          any time
+          Render partial View Cannot be store in any variable
+*@

@@ -137,7 +137,7 @@ namespace MVCRockStar_21102021.Controllers
             return View(listObj);
         }
 
-        public ActionResult GetEmployeeInfo5()
+        public ViewResult GetEmployeeInfo5()
         {
             List<EmployeeModel> listObj = new List<EmployeeModel>();
 
@@ -181,5 +181,58 @@ namespace MVCRockStar_21102021.Controllers
 
             return View(empdept);
         }
+
+        public ViewResult getMepartialViewEx()
+        {
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Preeti";
+            obj.EmpSalary = 21000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 22000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "Tajun";
+            obj2.EmpSalary = 23000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return View(listObj);
+        }
+
+        public PartialViewResult getMepartialViewEx2()
+        {
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Preeti";
+            obj.EmpSalary = 21000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 22000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "Tajun";
+            obj2.EmpSalary = 23000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return PartialView("_MyPartialView",listObj);
+        }
+
     }
 }
