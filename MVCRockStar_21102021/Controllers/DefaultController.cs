@@ -266,7 +266,7 @@ namespace MVCRockStar_21102021.Controllers
             return Redirect("http://www.google.com");
         }
 
-        public RedirectResult GotoUrl2()
+        public RedirectResult GotoUrl2(int ? id)
         {
 
             return Redirect("~/Default/TestResult?id=1");
@@ -276,5 +276,62 @@ namespace MVCRockStar_21102021.Controllers
         {
             return RedirectToAction("GotoUrl2","Default");
         }
+
+        public RedirectToRouteResult GotoUrl4()
+        {
+            return RedirectToAction("GotoUrl2", "Default",new {id=1 });
+        }
+        public ViewResult GetData(EmployeeModel emp)
+        {
+
+            return View();
+        }
+        public RedirectToRouteResult GotoUrl4(EmployeeModel emp)
+        {
+            return RedirectToAction("GotoUrl2", "Default", new { id = 1 });
+        }
+
+        public RedirectToRouteResult GotoUrl5()
+        {
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Preeti";
+            obj.EmpSalary = 21000;
+
+            return RedirectToAction("GetData", "Default", obj);
+        }
+
+        public RedirectToRouteResult GotoUrl6()
+        {
+            return RedirectToRoute("Default22");
+        }
+
+        public FileResult getMeFileData()
+        {
+            return File("~/Web.config", "text/plain");
+        }
+
+        public FileResult getMeFileData2()
+        {
+            return File("~/WithConversionOptions.pdf", "application/pdf");
+        }
+        public FileResult getMeFileData3()
+        {
+            return File("~/Web.config", "application/xml","myweb");
+        }
+
+        public ContentResult DifferentContent(int? id)
+        {
+            if (id == 1) {
+                return Content("Hello World");
+            }
+            else if (id == 2) {
+                return Content("<p style=color:red>Hello World</p>");
+            }
+            else {
+                return Content("<script>alert('Hello World')</script>");
+            }
+        }
+
     }
 }
