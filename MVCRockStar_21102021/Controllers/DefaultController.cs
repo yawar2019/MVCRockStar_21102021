@@ -234,5 +234,47 @@ namespace MVCRockStar_21102021.Controllers
             return PartialView("_MyPartialView",listObj);
         }
 
+        public JsonResult TestResult(int? id)
+        {
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Preeti";
+            obj.EmpSalary = 21000;
+
+            EmployeeModel obj1 = new EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Divya";
+            obj1.EmpSalary = 22000;
+
+            EmployeeModel obj2 = new EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "Tajun";
+            obj2.EmpSalary = 23000;
+
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return Json(listObj,JsonRequestBehavior.AllowGet);
+        }
+
+        public RedirectResult GotoUrl()
+        {
+
+            return Redirect("http://www.google.com");
+        }
+
+        public RedirectResult GotoUrl2()
+        {
+
+            return Redirect("~/Default/TestResult?id=1");
+        }
+
+        public RedirectToRouteResult GotoUrl3()
+        {
+            return RedirectToAction("GotoUrl2","Default");
+        }
     }
 }
