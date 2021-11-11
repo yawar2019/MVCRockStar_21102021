@@ -9,11 +9,28 @@ namespace AdoNet.Controllers
 {
     public class EmployeeController : Controller
     {
+        EmployeeContext db = new Models.EmployeeContext();
+
         // GET: Employee
         public ActionResult Index()
         {
-            EmployeeContext db = new Models.EmployeeContext(); 
             return View(db.GetEmployees());
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(EmployeeModel emp)
+        {
+            int i = db.SaveEmployee(emp);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }

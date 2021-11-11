@@ -31,5 +31,17 @@ namespace AdoNet.Models
             }
             return listobj;
         }
+        public int SaveEmployee(EmployeeModel emp)
+        {
+            SqlCommand cmd = new SqlCommand("sp_InsertEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@EmpName", emp.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+            int result = cmd.ExecuteNonQuery();
+            con.Close();
+
+            return result;
+        }
     }
 }
