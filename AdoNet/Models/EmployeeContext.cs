@@ -23,7 +23,7 @@ namespace AdoNet.Models
             foreach (DataRow dr in dt.Rows)
             {
                 EmployeeModel emp = new EmployeeModel();
-                emp.EmpId =Convert.ToInt32(dr[0]);
+                emp.EmpId = Convert.ToInt32(dr[0]);
                 emp.EmpName = Convert.ToString(dr[1]);
                 emp.EmpSalary = Convert.ToInt32(dr[2]);
 
@@ -43,5 +43,54 @@ namespace AdoNet.Models
 
             return result;
         }
+
+
+
+        public EmployeeModel GetEmployeesById(int? id)
+        {
+            EmployeeModel obj = new EmployeeModel();
+
+            SqlCommand cmd = new SqlCommand("usp_getEmployeesById", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmpId", id);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                obj.EmpId = Convert.ToInt32(dr[0]);
+                obj.EmpName = Convert.ToString(dr[1]);
+                obj.EmpSalary = Convert.ToInt32(dr[2]);
+            }
+            return obj;
+        }
+
+
+        public int UpdateEmployee(EmployeeModel emp)
+        {
+            SqlCommand cmd = new SqlCommand("spr_updateEmployeeDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@Empid", emp.EmpId);
+            cmd.Parameters.AddWithValue("@EmpName", emp.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+            int result = cmd.ExecuteNonQuery();
+            con.Close();
+            return result;
+        }
+        public int DeleteEmployee(int id)
+        {
+            SqlCommand cmd = new SqlCommand("spr_deleteEmployeeDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@empid", id);
+            int result = cmd.ExecuteNonQuery();
+            con.Close();
+            return result;
+        }
+
+
+
+        
     }
 }
