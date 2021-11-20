@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCRockStar_21102021", "MVC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet", "AdoNet\AdoNet.csproj", "{57B0A875-CC2E-404B-B93E-A7CB2C66DDBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseApproached", "DataBaseApproached\DataBaseApproached.csproj", "{6B70BBB9-9560-4F4F-AC2B-1E1E50C6C089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{3EAE4F3E-51BB-4987-B55F-CE1582A470CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{57B0A875-CC2E-404B-B93E-A7CB2C66DDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57B0A875-CC2E-404B-B93E-A7CB2C66DDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57B0A875-CC2E-404B-B93E-A7CB2C66DDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B70BBB9-9560-4F4F-AC2B-1E1E50C6C089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B70BBB9-9560-4F4F-AC2B-1E1E50C6C089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B70BBB9-9560-4F4F-AC2B-1E1E50C6C089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B70BBB9-9560-4F4F-AC2B-1E1E50C6C089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAE4F3E-51BB-4987-B55F-CE1582A470CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAE4F3E-51BB-4987-B55F-CE1582A470CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAE4F3E-51BB-4987-B55F-CE1582A470CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAE4F3E-51BB-4987-B55F-CE1582A470CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
