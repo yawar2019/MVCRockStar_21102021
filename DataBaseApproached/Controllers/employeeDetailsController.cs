@@ -12,7 +12,7 @@ namespace DataBaseApproached.Controllers
 {
     public class employeeDetailsController : Controller
     {
-        private EmployeeEntities db = new EmployeeEntities();
+        private EmployeeEntities1 db = new EmployeeEntities1();
 
         // GET: employeeDetails
         public ActionResult Index()

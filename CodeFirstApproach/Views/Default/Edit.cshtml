@@ -1,0 +1,31 @@
+﻿@model CodeFirstApproach.Models.Employee
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+<form action="~/Default/Edit" method="post">
+    <input type="hidden" name="EmpId" value="@Model.EmpId" />
+    <div class="row">
+        <div class="col-md-2">
+            <label>EmpName</label>
+        </div>
+        <div class="col-md-10">
+            <input type="text" name="EmpName" value="@Model.EmpName" class="form-control" />
+        </div>
+    </div>
+    <div class="row"></div>
+    <div class="row form-inline">
+        <div class="col-md-2">
+            <label>EmpSalary</label>
+        </div>
+        <div class="col-md-10">
+            <input type="text" name="EmpSalary" value="@Model.EmpSalary" class="form-control" />
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Save" class="btn btn-success" />
+    </div>
+</form>

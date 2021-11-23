@@ -1,0 +1,21 @@
+﻿@model List<CodeFirstApproach.Models.Department>
+@{
+    ViewBag.Title = "GetEmployees";
+}
+
+<h2>GetDepartments</h2>
+
+<table class="table table-bordered table-responsive">
+    <tr>
+        <th>DeptId</th>
+        <th>Department Name</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+        </tr>
+    }
+</table>

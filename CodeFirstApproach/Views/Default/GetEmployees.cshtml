@@ -1,0 +1,27 @@
+﻿@model List<CodeFirstApproach.Models.Employee>
+@{
+    ViewBag.Title = "GetEmployees";
+}
+
+<h2>GetEmployees</h2>
+
+<table class="table table-bordered table-responsive">
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+            <td>
+           @Html.ActionLink("Edit","Edit",new { id = item.EmpId })|
+           @Html.ActionLink("Delete", "Delete", new { id = item.EmpId })|
+            </td>
+        </tr>
+    }
+</table>
