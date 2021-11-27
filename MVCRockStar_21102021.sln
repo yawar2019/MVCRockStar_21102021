@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{ABD8D549-7C45-452E-B143-6BDBB10300C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproach", "ModelFirstApproach\ModelFirstApproach.csproj", "{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ABD8D549-7C45-452E-B143-6BDBB10300C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABD8D549-7C45-452E-B143-6BDBB10300C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD8D549-7C45-452E-B143-6BDBB10300C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

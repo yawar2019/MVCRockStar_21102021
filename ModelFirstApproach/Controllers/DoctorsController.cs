@@ -6,129 +6,111 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using DataBaseApproached.Models;
+using ModelFirstApproach.Models;
 
-namespace DataBaseApproached.Controllers
+namespace ModelFirstApproach.Controllers
 {
-    public class employeeDetailsController : Controller
+    public class DoctorsController : Controller
     {
-        private EmployeeEntities1 db = new EmployeeEntities1();
+        private DoctorModelContainer db = new DoctorModelContainer();
 
-        // GET: employeeDetails
+        // GET: Doctors
         public ActionResult Index()
         {
-            return View(db.employeeDetails.ToList());
+            return View(db.Doctors.ToList());
         }
 
-        public ActionResult DisplayEmpDept()
-        {
-            var EmpDept = (from emp in db.employeeDetails
-                           join
-                           dept in db.Departments
-                           on emp.DeptId equals dept.DeptId
-                           select new EmployeeDepartmentDet
-                           {
-                               EmpId = emp.EmpId,
-                               EmpName = emp.EmpName,
-                               EmpSalary = (int)emp.EmpSalary,
-                               DeptName = dept.DeptName
-                           }).ToList();
-
-
-            return View(EmpDept);
-        }
-
-        // GET: employeeDetails/Details/5
+        // GET: Doctors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            employeeDetail employeeDetail = db.employeeDetails.Find(id);
-            if (employeeDetail == null)
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(employeeDetail);
+            return View(doctor);
         }
 
-        // GET: employeeDetails/Create
+        // GET: Doctors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: employeeDetails/Create
+        // POST: Doctors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EmpId,EmpName,EmpSalary,DeptId,Address,dob,Status,CreatedBy,MobileNo")] employeeDetail employeeDetail)
+        public ActionResult Create([Bind(Include = "DocId,DoctorName,Fees")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                db.employeeDetails.Add(employeeDetail);
+                db.Doctors.Add(doctor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(employeeDetail);
+            return View(doctor);
         }
 
-        // GET: employeeDetails/Edit/5
+        // GET: Doctors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            employeeDetail employeeDetail = db.employeeDetails.Find(id);
-            if (employeeDetail == null)
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(employeeDetail);
+            return View(doctor);
         }
 
-        // POST: employeeDetails/Edit/5
+        // POST: Doctors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmpId,EmpName,EmpSalary,DeptId,Address,dob,Status,CreatedBy,MobileNo")] employeeDetail employeeDetail)
+        public ActionResult Edit([Bind(Include = "DocId,DoctorName,Fees")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(employeeDetail).State = EntityState.Modified;
+                db.Entry(doctor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(employeeDetail);
+            return View(doctor);
         }
 
-        // GET: employeeDetails/Delete/5
+        // GET: Doctors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            employeeDetail employeeDetail = db.employeeDetails.Find(id);
-            if (employeeDetail == null)
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(employeeDetail);
+            return View(doctor);
         }
 
-        // POST: employeeDetails/Delete/5
+        // POST: Doctors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            employeeDetail employeeDetail = db.employeeDetails.Find(id);
-            db.employeeDetails.Remove(employeeDetail);
+            Doctor doctor = db.Doctors.Find(id);
+            db.Doctors.Remove(doctor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

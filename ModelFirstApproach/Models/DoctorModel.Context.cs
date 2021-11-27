@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataBaseApproached.Models
+namespace ModelFirstApproach.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeEntities1 : DbContext
+    public partial class DoctorModelContainer : DbContext
     {
-        public EmployeeEntities1()
-            : base("name=EmployeeEntities1")
+        public DoctorModelContainer()
+            : base("name=DoctorModelContainer")
         {
         }
     
@@ -25,7 +25,6 @@ namespace DataBaseApproached.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<employeeDetail> employeeDetails { get; set; }
-        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
     }
 }

@@ -16,5 +16,6 @@ namespace CodeFirstApproach.Models
         public int EmpSalary { get; set; }
         public int DeptId { get; set; }
 
+        public bool Status { get; set; }
     }
 }
