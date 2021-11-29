@@ -67,5 +67,12 @@ namespace AdoNet.Controllers
             }
             return View();
         }
+
+        public ActionResult HtmlHelperExample()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Divya";
+            return View(emp);
+        }
     }
 }

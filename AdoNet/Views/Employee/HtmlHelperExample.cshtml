@@ -1,0 +1,59 @@
+﻿@model AdoNet.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+@*<input type="type" name="name" value="" />
+ there are two ways to create controls in mvc
+1)Html---------------
+2)HtmlHelpers:are c# methods which help u to create Html Controls
+Ex:
+@Html.TextBox()//loosly couple creating textbox using htmlhelper(Model Not Required)
+@Html.TextBoxFor()//Tightly couple Alwayz need Model(required)*@
+ 
+
+
+<script>
+    function fun()
+    {
+        alert("Party with Friends");
+    }
+</script>
+
+
+
+
+<input type="text" name="FirstName" id="FirstName" value="Divya" style="background-color:aqua;" onclick="fun()" />
+@Html.TextBox("LastName","pamidi",new { style = "background-color:Green;color:white" , @class="form-control",id="txtLastName", onclick = "fun()" })
+@Html.TextBoxFor(a=>a.EmpName, new { style = "background-color:purple;color:white", @class = "form-control", id = "txtLastName", onclick = "fun()" })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
