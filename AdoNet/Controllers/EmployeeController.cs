@@ -1,5 +1,6 @@
 ﻿using AdoNet.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -72,14 +73,15 @@ namespace AdoNet.Controllers
         {
             EmployeeModel emp = new EmployeeModel();
             emp.EmpName = "Divya";
+            ViewBag.ddlEmployee = new SelectList(db.GetEmployees(), "EmpId", "EmpName");
             return View(emp);
         }
         [HttpPost]
-        public ActionResult HtmlHelperExample(string username)
+        public ActionResult HtmlHelperExample(string username,string pwd,bool agreement,string gender,string country)
         {
             EmployeeModel emp = new EmployeeModel();
             emp.EmpName = "Divya";
-            ViewBag.userName = username;
+            ViewBag.userinfo = username+","+pwd+","+agreement+","+gender+","+ country;
             return View(emp);
         }
     }

@@ -6,52 +6,50 @@
 <h2>HtmlHelperExample</h2>
 
 @*<input type="type" name="name" value="" />
- there are two ways to create controls in mvc
-1)Html---------------
-2)HtmlHelpers:are c# methods which help u to create Html Controls
-Ex:
-@Html.TextBox()//loosly couple creating textbox using htmlhelper(Model Not Required)
-@Html.TextBoxFor()//Tightly couple Alwayz need Model(required)*@
- 
+     there are two ways to create controls in mvc
+    1)Html---------------
+    2)HtmlHelpers:are c# methods which help u to create Html Controls
+    Ex:
+    @Html.TextBox()//loosly couple creating textbox using htmlhelper(Model Not Required)
+    @Html.TextBoxFor()//Tightly couple Alwayz need Model(required)*@
+
 <style>
-    #EmpId
-    {
-        background-color:orangered;
+    #EmpId {
+        background-color: orangered;
     }
 </style>
 
 <script>
-    function fun()
-    {
+    function fun() {
         alert("Party with Friends");
     }
 </script>
 
 
-@Html.LabelFor(a=>a.EmpName)
+@Html.LabelFor(a => a.EmpName)
 
 <input type="text" name="FirstName" id="FirstName" value="Divya" style="background-color:aqua;" onclick="fun()" />
-@Html.TextBox("LastName","pamidi",new { style = "background-color:Green;color:white" , @class="form-control",id="txtLastName", onclick = "fun()" })
-@Html.TextBoxFor(a=>a.EmpName, new { style = "background-color:purple;color:white", @class = "form-control", id = "txtLastName", onclick = "fun()" })
-@Html.EditorFor(a=>a.Status)
-<span>Password</span>@Html.Password("pwd", "test", new {@class="form-control" })
+@Html.TextBox("LastName", "pamidi", new { style = "background-color:Green;color:white", @class = "form-control", id = "txtLastName", onclick = "fun()" })
+@Html.TextBoxFor(a => a.EmpName, new { style = "background-color:purple;color:white", @class = "form-control", id = "txtLastName", onclick = "fun()" })
+@Html.EditorFor(a => a.Status)
+<span>Password</span>@Html.Password("pwd", "test", new { @class = "form-control" })
 <br />
-<span>Gender</span>@Html.RadioButton("Gender", "Male",true)<span>Male</span>
-                   @Html.RadioButton("Gender", "FeMale")<span>FeMale</span>
+<span>Gender</span>@Html.RadioButton("Gender", "Male", true)<span>Male</span>
+@Html.RadioButton("Gender", "FeMale")<span>FeMale</span>
 <br />
 <span>Course</span>@Html.CheckBox("java") <span>Java</span>
-                   @Html.CheckBox("Dotnet") <span>Dotnet</span>
+@Html.CheckBox("Dotnet") <span>Dotnet</span>
 <br />
 <span>Country</span>
-@Html.DropDownList("Country",new List<SelectListItem>() {
+@Html.DropDownList("Country", new List<SelectListItem>() {
 new SelectListItem {Text="India",Value="1"},
 new SelectListItem {Text="China",Value="2",Selected=true},
 new SelectListItem {Text="Bangladesh",Value="3"}
 
-},"Select Country")
+}, "Select Country")
 
 <span>Address</span>
-@Html.TextArea("Address","Pune",10,10,new {@class="form-control"})
+@Html.TextArea("Address", "Pune", 10, 10, new { @class = "form-control" })
 <br />
 <br /><br />
 <span>xxxxxxxxxxxxxxxxxxxxxxx</span>
@@ -60,14 +58,28 @@ new SelectListItem {Text="Bangladesh",Value="3"}
 <span>@@@@@@@@@@@@@@@@@@@@@@@@</span>
 
 <form action="~/Employee/HtmlHelperExample" method="post">
-    <input type="text" name="username"/>
-    <input type="submit"  value="Save" />
-    @ViewBag.userName
+    @*<input type="text" name="username"/>
+        <input type="password" name="pwd" />*@
+    @Html.TextBox("username")<br />
+    @Html.Password("pwd")<br />
+    @Html.CheckBox("agreement")<br />
+    @Html.RadioButton("gender", "Male")<span>Male</span>  @Html.RadioButton("gender", "FeMale")<span>FeMale</span>
+    @Html.DropDownList("country", new List<SelectListItem>() {
+new SelectListItem {Text="India",Value="India" },
+new SelectListItem {Text="Sri Lanka",Value="Sri Lanka" },
+new SelectListItem {Text="Australia",Value="Australia" },
+
+})
+    <input type="submit" value="Save" />
+    @ViewBag.userinfo
 </form>
 
 
+<br />
+@*****************@
 
-
+@Html.DropDownList("ddlEmployee")<br />
+@Html.DropDownList("dropdownEmployee",(IEnumerable<SelectListItem>)ViewBag.ddlEmployee,"Select Employee")<br />
 
 
 
