@@ -74,5 +74,13 @@ namespace AdoNet.Controllers
             emp.EmpName = "Divya";
             return View(emp);
         }
+        [HttpPost]
+        public ActionResult HtmlHelperExample(string username)
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Divya";
+            ViewBag.userName = username;
+            return View(emp);
+        }
     }
 }
