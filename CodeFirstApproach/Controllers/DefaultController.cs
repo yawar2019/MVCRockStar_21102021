@@ -77,5 +77,20 @@ namespace CodeFirstApproach.Controllers
 
             return View();
         }
+
+        public ActionResult UserDefinedControls()
+        {
+            return View();
+        }
+
+        public JsonResult getjsondata()
+        {
+            Employee emp = new Employee();
+            emp.EmpId = 1;
+            emp.EmpName = "test";
+            emp.EmpSalary = 21000;
+
+            return Json(emp,JsonRequestBehavior.AllowGet);
+        }
     }
 }

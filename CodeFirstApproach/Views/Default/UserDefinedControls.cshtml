@@ -1,0 +1,36 @@
+﻿
+@using CodeFirstApproach.CustomHelper
+@{
+    ViewBag.Title = "UserDefinedControls";
+}
+
+<h2>UserDefinedControls</h2>
+@UserdefinedControl.MyLabel("I accept the agreement")
+
+@Html.createUrControl("text","blue")<br />
+@Html.createUrControl("checkbox","red")<br />
+@Html.createUrControl("radio","yellow")<br />
+@Html.createUrControl("file","gray")<br />
+
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")
+
+<input type="text" name="name" value="" onclick="showdata()" />
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script>
+function showdata() {
+            $.ajax({
+                url: "http://localhost:50337/Default/getjsondata",
+                type: "Get",
+                datatype: "json",
+                success: function (result) {
+                    alert(result.EmpName);
+                }
+            });
+  }
+</script>
