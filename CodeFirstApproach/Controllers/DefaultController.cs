@@ -92,5 +92,23 @@ namespace CodeFirstApproach.Controllers
 
             return Json(emp,JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ValidationExample(RegisterationModel reg)
+        {
+            if(ModelState.IsValid)
+            {
+
+            }
+            else
+            {
+
+            }
+            return View();
+        }
     }
 }
