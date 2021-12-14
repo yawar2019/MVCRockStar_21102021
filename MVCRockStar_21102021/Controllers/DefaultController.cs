@@ -11,9 +11,18 @@ namespace MVCRockStar_21102021.Controllers
     {
        
         // GET: Default
-       public string GetId()
+        [CustomFilter]
+       public ViewResult GetId()
         {
-            return "hello";
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Riyan";
+            emp.EmpSalary = 21000;
+
+            ViewBag.Player = "Rohit Sharma";
+
+
+            return View(emp);
         }
         public int GetNumber()
         {

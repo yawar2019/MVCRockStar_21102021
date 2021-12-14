@@ -5,13 +5,18 @@ using System.Web;
 using System.Web.Mvc;
 using CodeFirstApproach.Models;
 using System.Data.Entity;
+using MVCRockStar_21102021.Models;
 
 namespace CodeFirstApproach.Controllers
 {
+
     public class DefaultController : Controller
     {
         // GET: Default
         private readonly EmployeeContext db = new EmployeeContext();
+
+        [CustomFilter]
+
         public ActionResult GetEmployees()
         {
             return View(db.Employees.ToList());

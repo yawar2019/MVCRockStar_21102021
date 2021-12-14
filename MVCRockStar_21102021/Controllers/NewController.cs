@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCRockStar_21102021.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,13 @@ namespace MVCRockStar_21102021.Controllers
     {
         // GET: New
         public ActionResult RamaeInternational()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [CustomFilter]
+        public ActionResult RamaeInternational(EmployeeModel emp)
         {
             return View();
         }

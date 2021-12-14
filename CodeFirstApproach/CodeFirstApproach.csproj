@@ -210,6 +210,12 @@
       <DependentUpon>202111240328578_addStatusColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVCRockStar_21102021\MVCRockStar_21102021.csproj">
+      <Project>{275E59ED-2599-46FE-98A9-3F466237CEC3}</Project>
+      <Name>MVCRockStar_21102021</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
