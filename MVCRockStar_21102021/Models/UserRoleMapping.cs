@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVCRockStar_21102021.scripts.Models
+namespace MVCRockStar_21102021.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class UserDetail
+    public partial class UserRoleMapping
     {
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public int id { get; set; }
+        public Nullable<int> EmpId { get; set; }
+        public Nullable<int> RoleId { get; set; }
     }
 }

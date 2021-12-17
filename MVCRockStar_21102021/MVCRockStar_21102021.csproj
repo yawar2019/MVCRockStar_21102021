@@ -132,12 +132,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\Models\LoginModel.Context.tt">
+    <Content Include="Models\LoginModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>LoginModel.Context.cs</LastGenOutput>
       <DependentUpon>LoginModel.edmx</DependentUpon>
+      <LastGenOutput>LoginModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="scripts\Models\LoginModel.tt">
+    <Content Include="Models\LoginModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoginModel.edmx</DependentUpon>
       <LastGenOutput>LoginModel.cs</LastGenOutput>
@@ -148,11 +148,11 @@
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Purchase\Views\web.config" />
-    <EntityDeploy Include="scripts\Models\LoginModel.edmx">
+    <EntityDeploy Include="Models\LoginModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LoginModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="scripts\Models\LoginModel.edmx.diagram">
+    <Content Include="Models\LoginModel.edmx.diagram">
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
@@ -174,34 +174,35 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="CustomFilter\MyRoles.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\CustomFilter.cs" />
-    <Compile Include="scripts\Models\DepartmentModel.cs" />
-    <Compile Include="scripts\Models\EmployeeModel.cs" />
-    <Compile Include="scripts\Models\LoginModel.Context.cs">
+    <Compile Include="Models\CustomFilter.cs" />
+    <Compile Include="Models\DepartmentModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\LoginModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\LoginModel.cs">
+    <Compile Include="Models\LoginModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\LoginModel.Designer.cs">
+    <Compile Include="Models\LoginModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\Role.cs">
+    <Compile Include="Models\Role.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\UserDetail.cs">
+    <Compile Include="Models\UserDetail.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="scripts\Models\UserRoleMapping.cs">
+    <Compile Include="Models\UserRoleMapping.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

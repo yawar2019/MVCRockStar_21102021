@@ -9,9 +9,9 @@ namespace MVCRockStar_21102021.Controllers
 {
     public class DefaultController : Controller
     {
-       
+
         // GET: Default
-        [CustomFilter]
+        [MVCRockStar_21102021.Models.CustomFilter]
        public ViewResult GetId()
         {
             EmployeeModel emp = new EmployeeModel();

@@ -1,4 +1,4 @@
-﻿using MVCRockStar_21102021.scripts.Models;
+﻿using MVCRockStar_21102021.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace MVCRockStar_21102021.Controllers
     public class LoginController : Controller
     {
         // GET: Login
-        EmployeeEntities db = new EmployeeEntities();
+        EmployeeEntities1 db = new EmployeeEntities1();
         public ActionResult Login()
         {
             return View();
@@ -33,18 +33,24 @@ namespace MVCRockStar_21102021.Controllers
             return View();
         }
 
-        [Authorize]
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("~/Login/Login");
+        }
+
+        [Authorize(Roles ="Admin,Manager")]
         public ActionResult DashBoard()
         {
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles="Admin")]
         public ActionResult ContactUs()
         {
             return View();
         }
-        [Authorize]
+        [Authorize(Roles = "Manager")]
         public ActionResult AboutUs()
         {
             return View();

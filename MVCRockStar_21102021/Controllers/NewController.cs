@@ -16,7 +16,7 @@ namespace MVCRockStar_21102021.Controllers
         }
 
         [HttpPost]
-        [CustomFilter]
+        [MVCRockStar_21102021.Models.CustomFilter]
         public ActionResult RamaeInternational(EmployeeModel emp)
         {
             return View();
