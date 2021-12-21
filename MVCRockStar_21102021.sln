@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproach", "ModelFirstApproach\ModelFirstApproach.csproj", "{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorExample", "HandleErrorExample\HandleErrorExample.csproj", "{56C91BA7-1731-4F62-82D3-66A9A106D155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
