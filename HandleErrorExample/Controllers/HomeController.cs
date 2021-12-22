@@ -33,5 +33,13 @@ namespace HandleErrorExample.Controllers
             int c = (b/a);
             return Content(c.ToString());
         }
+
+        [OutputCache(Duration = 20,Location =System.Web.UI.OutputCacheLocation.Client)]
+        public ActionResult CacheMyResult()
+        {
+            return View();
+        }
+
+        
     }
 }
