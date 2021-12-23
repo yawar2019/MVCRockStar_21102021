@@ -40,6 +40,24 @@ namespace HandleErrorExample.Controllers
             return View();
         }
 
-        
+        public ActionResult ViewDataViewBagTempData()
+        {
+            ViewBag.FirstName = "Mr";
+            ViewData["LastName"] = "Wilson";
+            TempData["MiddleName"] = "Leo";
+
+            return RedirectToAction("ViewDataViewBagTempData2");
+        }
+
+        public ActionResult ViewDataViewBagTempData2()
+        {
+            ViewBag.a= ViewBag.FirstName;
+            ViewBag.b = ViewData["LastName"];
+            ViewBag.c = TempData.Peek("MiddleName");
+            //TempData.Keep();
+            return View();
+        }
+
+
     }
 }

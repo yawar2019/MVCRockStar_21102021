@@ -269,6 +269,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\MyFavoriteError.cshtml" />
     <Content Include="Views\Home\CacheMyResult.cshtml" />
+    <Content Include="Views\Home\ViewDataViewBagTempData2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
