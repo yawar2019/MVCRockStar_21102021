@@ -56,5 +56,13 @@ namespace MVCRockStar_21102021.Controllers
             return View();
         }
 
+        public ActionResult ConsumeService()
+        {
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+         string result=   obj.Add(10, 12).ToString();
+            return Content(result);
+        }
+
+
     }
 }

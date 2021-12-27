@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCRockStar_21102021", "MVCRockStar_21102021\MVCRockStar_21102021.csproj", "{275E59ED-2599-46FE-98A9-3F466237CEC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F77E576D-9E23-4DEC-9EF9-446E19CA478C} = {F77E576D-9E23-4DEC-9EF9-446E19CA478C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet", "AdoNet\AdoNet.csproj", "{57B0A875-CC2E-404B-B93E-A7CB2C66DDBB}"
 EndProject
@@ -16,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproach", "ModelFirstApproach\ModelFirstApproach.csproj", "{5CE0ADB4-CF43-48DC-87EE-D0046DBE305E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorExample", "HandleErrorExample\HandleErrorExample.csproj", "{56C91BA7-1731-4F62-82D3-66A9A106D155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceApp", "WebServiceApp\WebServiceApp.csproj", "{F77E576D-9E23-4DEC-9EF9-446E19CA478C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,10 @@ Global
 		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C91BA7-1731-4F62-82D3-66A9A106D155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
