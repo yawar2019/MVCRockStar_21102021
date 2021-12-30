@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorExample", "Handl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceApp", "WebServiceApp\WebServiceApp.csproj", "{F77E576D-9E23-4DEC-9EF9-446E19CA478C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFService", "WCFService\WCFService.csproj", "{62CE869E-D063-44A7-A1A0-FC95F7F30CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{D1801A1D-6329-4F40-9F3F-C233D0F2B616}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,14 @@ Global
 		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F77E576D-9E23-4DEC-9EF9-446E19CA478C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CE869E-D063-44A7-A1A0-FC95F7F30CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CE869E-D063-44A7-A1A0-FC95F7F30CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CE869E-D063-44A7-A1A0-FC95F7F30CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CE869E-D063-44A7-A1A0-FC95F7F30CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1801A1D-6329-4F40-9F3F-C233D0F2B616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1801A1D-6329-4F40-9F3F-C233D0F2B616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1801A1D-6329-4F40-9F3F-C233D0F2B616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1801A1D-6329-4F40-9F3F-C233D0F2B616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

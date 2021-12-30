@@ -84,5 +84,12 @@ namespace AdoNet.Controllers
             ViewBag.userinfo = username+","+pwd+","+agreement+","+gender+","+ country;
             return View(emp);
         }
+
+        public ActionResult ConsumeWcfService()
+        {
+            ServiceReference1.Service1Client s1 = new ServiceReference1.Service1Client("NetTcpBinding_IService1");
+            var result=s1.GetData(12).ToString();
+            return Content(result);
+        }
     }
 }
