@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Getdata";
+}
+
+<h2>Getdata</h2>
+
+
+<table id="tblEmployee" class="table table-bordered table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>Salary</th>
+    </tr>
+</table>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    //$document.ready(function () {
+        $.ajax({
+            url: "http://localhost:51571/api/employeeDetailsApi/GetemployeeDetails",
+            type:"GET",
+            dataType: "JSON",
+            success: function (result) {
+                debugger;
+                $.each(result, function (index, Key) {
+
+                    $('#tblEmployee tr:last').after('<tr><td>' + Key.EmpId + '</td><td>' + Key.EmpName + '</td><td>' + Key.EmpSalary + '</td>/tr>')
+
+                })
+            }
+        })
+
+    //})
+    
+    
+    
+    
+    
+</script>
