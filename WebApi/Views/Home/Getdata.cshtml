@@ -13,28 +13,55 @@
         <th>Salary</th>
     </tr>
 </table>
+<form>
+    <label>EmpName</label>
+    <input type="text" id="EmpName" value="" class="form-control" /><br />
+    <label>EmpSalary</label>
+    <input type="text" id="EmpSalary" value="" class="form-control" /><br />
+    <input type="button" onclick="save()" value="Save" class="form-control" />
+</form>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script>
     //$document.ready(function () {
+    $.ajax({
+        url: "http://localhost:51571/api/employeeDetailsApi/GetemployeeDetails",
+        type: "GET",
+        dataType: "JSON",
+        success: function (result) {
+            debugger;
+            $.each(result, function (index, Key) {
+
+                $('#tblEmployee tr:last').after('<tr><td>' + Key.EmpId + '</td><td>' + Key.EmpName + '</td><td>' + Key.EmpSalary + '</td>/tr>')
+
+            })
+        }
+    })
+
+    //task void
+    //task<int>
+    //})
+    function save() {
+        var empdata = {
+            EmpName: $('#EmpName').val(),
+            EmpSalary: $('#EmpSalary').val()
+        }
         $.ajax({
-            url: "http://localhost:51571/api/employeeDetailsApi/GetemployeeDetails",
-            type:"GET",
+            url: "http://localhost:51571/api/employeeDetailsApi/PostemployeeDetail",
+            type: "POST",
             dataType: "JSON",
+            data:empdata,
             success: function (result) {
-                debugger;
-                $.each(result, function (index, Key) {
-
-                    $('#tblEmployee tr:last').after('<tr><td>' + Key.EmpId + '</td><td>' + Key.EmpName + '</td><td>' + Key.EmpSalary + '</td>/tr>')
-
-                })
+                alert("Inserted Successfully");
             }
         })
 
-    //})
-    
-    
-    
-    
-    
+        //$.post("http://localhost:51571/api/employeeDetailsApi/PostemployeeDetail", { EmpName: Name, EmpSalary: Salary })
+        //    .done(function (data) {
+        //    alert("Inserted Successfully");
+        //    });
+
+    }
+
+
 </script>

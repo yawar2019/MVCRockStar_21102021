@@ -21,5 +21,10 @@ namespace MVCRockStar_21102021.Controllers
         {
             return View();
         }
+
+        public ActionResult GetAngular()
+        {
+            return View();
+        }
     }
 }

@@ -165,6 +165,7 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\MyTestScript.js" />
     <Content Include="Service References\ServiceReference1\MVCRockStar_21102021.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -252,6 +253,7 @@
     <Content Include="Views\Login\AboutUs.cshtml" />
     <Content Include="Views\Login\DashBoard.cshtml" />
     <None Include="Service References\ServiceReference1\WebService1.wsdl" />
+    <Content Include="Views\New\GetAngular.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
